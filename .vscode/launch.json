@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: FastAPI",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:app",
+                "--port",
+                "5000"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Python: FastAPI",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "app.main:app",
+                "--port",
+                "5000"
+            ],
+            "jinja": true,
+            "justMyCode": false
+        },
+        {
+            "name": "Python: test-case",
+            "type": "debugpy",
+            "cwd": "${workspaceFolder}/",
+            "request": "launch",
+            "module": "test.test_suite",
+            "args": [
+                "--config",
+                "config/",
+                "--test",
+                "test"
+            ],
+            "justMyCode": false
+        }
+    ]
+}
